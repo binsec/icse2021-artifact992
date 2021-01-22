@@ -346,7 +346,6 @@ struct padlock_cipher_data {
 # 292 "e_padlock.c"
 static volatile struct padlock_cipher_data *padlock_saved_context;
 
-/*@ rustina_out_of_scope */
 # 316 "e_padlock.c"
 static int padlock_insn_cpuid_available(void)
 {

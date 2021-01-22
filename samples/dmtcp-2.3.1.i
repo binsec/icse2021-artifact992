@@ -61,7 +61,6 @@ static int getport(int fd)
   return (int)(__extension__ ({ unsigned short int __v, __x = (unsigned short int) (addr.sin_port); if (__builtin_constant_p (__x)) __v = ((unsigned short int) ((((__x) >> 8) & 0xff) | (((__x) & 0xff) << 8))); else __asm__ ("rorw $8, %w0" : "=r" (__v) : "0" (__x) : "cc"); __v; }));
 }
 
-/*@ rustina_out_of_scope */
 # 97 "threadlist.cpp"
 static void save_sp(void **sp)
 {
@@ -77,3 +76,4 @@ static void save_sp(void **sp)
 
 
 }
+

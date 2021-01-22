@@ -25,7 +25,6 @@ int xdwCPUHasSSE =0;
 # 890 "xdesktopwaves.c"
 int xdwCPUHasSSE2 =0;
 
-/*@ rustina_out_of_scope */
 # 893 "xdesktopwaves.c"
 static void xdwDetectCPUFeatures(void)
 {
@@ -252,3 +251,4 @@ static int xdwOperateCellsOpt2(short * cells, int count)
 # 1972 "xdesktopwaves.c"
  return 0;
 }
+

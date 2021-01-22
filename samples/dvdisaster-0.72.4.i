@@ -33,7 +33,6 @@ static __inline__ __u64 __arch_swab64(__u64 val)
 
 }
 
-/*@ rustina_out_of_scope */
 # 210 "/usr/lib/gcc/i586-linux-gnu/4.9/include/cpuid.h"
 static __inline unsigned int
 __get_cpuid_max (unsigned int __ext, unsigned int *__sig)
@@ -83,3 +82,4 @@ __get_cpuid (unsigned int __level,
   __asm__ ("cpuid\n\t" : "=a" (*__eax), "=b" (*__ebx), "=c" (*__ecx), "=d" (*__edx) : "0" (__level));
   return 1;
 }
+

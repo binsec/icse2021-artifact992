@@ -44,7 +44,6 @@ static __inline__ Uint64 SDL_Swap64(Uint64 x)
  return v.u;
 }
 
-/*@ rustina_out_of_scope */
 # 33 "cpu_accel.c"
 static uint32_t arch_accel (uint32_t accel)
 {
@@ -117,3 +116,4 @@ static uint32_t arch_accel (uint32_t accel)
 
     return accel;
 }
+

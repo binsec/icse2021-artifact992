@@ -1,4 +1,3 @@
-/*@ rustina_out_of_scope */
 # 210 "/usr/lib/gcc/i586-linux-gnu/4.9/include/cpuid.h"
 static __inline unsigned int
 __get_cpuid_max (unsigned int __ext, unsigned int *__sig)
@@ -154,3 +153,4 @@ cpu_cache_size__cpuid4(void)
 
   return llc_size;
 }
+

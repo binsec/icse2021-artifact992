@@ -190,7 +190,6 @@ struct perf_mmap {
  char event_copy[(1 << 16)];
 };
 
-/*@ rustina_out_of_scope */
 # 175 "util/evlist.h"
 static inline unsigned int perf_mmap__read_head(struct perf_mmap *mm)
 {
@@ -200,7 +199,6 @@ static inline unsigned int perf_mmap__read_head(struct perf_mmap *mm)
  return head;
 }
 
-/*@ rustina_out_of_scope */
 # 183 "util/evlist.h"
 static inline void perf_mmap__write_tail(struct perf_mmap *md,
       unsigned long tail)
@@ -656,7 +654,6 @@ struct perf_tsc_conversion {
  u64 time_zero;
 };
 
-/*@ rustina_out_of_scope */
 # 32 "arch/x86/util/tsc.c"
 int perf_read_tsc_conversion(const struct perf_event_mmap_page *pc,
         struct perf_tsc_conversion *tc)
@@ -700,3 +697,4 @@ cpuid(unsigned int op, unsigned int *a, unsigned int *b, unsigned int *c,
    "=d" (*d)
    : "a" (op));
 }
+

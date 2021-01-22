@@ -50,7 +50,6 @@ static __inline__ Uint64 SDL_Swap64(Uint64 x)
 # 212 "/usr/lib/gcc/i586-linux-gnu/4.9/include/stddef.h"
 typedef unsigned int size_t;
 
-/*@ rustina_out_of_scope */
 # 222 "accore.c"
 static int cpuinfo_x86(void)
 {
@@ -282,3 +281,4 @@ static inline uint64_t ByteSwap64(uint64_t x)
   return __x.__ll;
 
 }
+

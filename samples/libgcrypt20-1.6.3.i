@@ -5072,7 +5072,6 @@ _gcry_mpi_powm (gcry_mpi_t res,
     _gcry_mpi_free_limb_space( xp_marker, xp_nlimbs );
 }
 
-/*@ rustina_out_of_scope */
 # 42 "hwf-x86.c"
 static int
 is_cpuid_available(void)
@@ -5594,3 +5593,4 @@ _gcry_mpi_tdiv_qr( gcry_mpi_t quot, gcry_mpi_t rem, gcry_mpi_t num, gcry_mpi_t d
  _gcry_mpi_free_limb_space (marker[markidx], marker_nlimbs[markidx]);
       }
 }
+

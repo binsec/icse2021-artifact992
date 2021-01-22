@@ -97,7 +97,7 @@ static inline void DoMAC_MMX(int16 *wave, int16 *coeffs, int32 count, int32 *acc
 
 	mm6: Temporary sample load and multiply register, temporary summation register
 	mm7: Temporary sample load and multiply register
-
+	
 */
  asm volatile(
 "pxor %%mm1, %%mm1\n\t"
@@ -158,7 +158,7 @@ static inline void DoMAC_MMX(int16 *wave, int16 *coeffs, int32 count, int32 *acc
 
 
 
-    // gcc has a bug or weird design flaw or something in it that keeps this from working properly: , "st", "st(1)", "st(2)", "st(3)", "st(4)", "st(5)", "st(6)", "st(7)"
+    // gcc has a bug or weird design flaw or something in it that keeps this from working properly: , "st", "st(1)", "st(2)", "st(3)", "st(4)", "st(5)", "st(6)", "st(7)"	
 
 );
 }
@@ -218,7 +218,6 @@ extern size_t strlen (const char *__s);
 # 60 "cputest/x86_cpu.h"
 typedef int32_t x86_reg;
 
-/*@ rustina_out_of_scope */
 # 42 "cputest/x86_cpu.c"
 int ff_get_cpu_flags_x86(void)
 {
@@ -357,7 +356,7 @@ static inline void DoMAC_SSE(float *wave, float *coeffs, int32 count, int32 *acc
 	ecx = count / 16
 	edx = 32-bit int output pointer
 
-
+	
 */
  // Will read 16 bytes of input waveform past end.
  asm volatile(
@@ -404,7 +403,7 @@ static inline void DoMAC_SSE(float *wave, float *coeffs, int32 count, int32 *acc
 //
 // Now for the "fun" horizontal addition...
 //
-//
+// 
 "movaps %%xmm7, %%xmm4\n\t"
 // (3 * 2^0) + (2 * 2^2) + (1 * 2^4) + (0 * 2^6) = 27
 "shufps $27, %%xmm7, %%xmm4\n\t"
@@ -429,3 +428,4 @@ static inline void DoMAC_SSE(float *wave, float *coeffs, int32 count, int32 *acc
 
 );
 }
+

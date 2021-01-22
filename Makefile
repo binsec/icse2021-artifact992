@@ -2,18 +2,24 @@ RUSTINA ?= bin/rustina-x86_64.AppImage
 
 SAMPLES = $(shell ls samples)
 BATCH = $(SAMPLES:%.i=data/%.csv)
+BATCHX = $(SAMPLES:%.i=data/%.woopt.csv)
 
 help:
-	@echo "Usage: make [-j] [ help | example | overview ]"
+	@echo "Usage: make [-j] [ help | motivating | table1 | table2 | all ]"
 
-example: example/test.i
+all: motivating table1 table4
+
+motivating: examples/motivating.i
 	$(RUSTINA) -v $(shell pwd)/$<
 
-overview: data/debian.csv
-	script/overview.py $<
+table1: data/debian.csv
+	scripts/table1.py $<
+
+table4: data/debian.woopt.csv data/debian.csv
+	scripts/table4.py $^
 
 data/debian.csv: $(BATCH)
-	@echo "project,file,func,id,line,size,extended,kind,patch,comments" > $@
+	@echo -n "project," > $@; head -n 1 $< >> $@
 	@for f in $^; do \
 		tail -n +2 $$f | \
 		while read -r l; do \
@@ -22,9 +28,21 @@ data/debian.csv: $(BATCH)
 		done; \
 	done
 
+data/debian.woopt.csv: $(BATCHX)
+	@echo -n "project," > $@; head -n 1 $< >> $@
+	@for f in $^; do \
+		tail -n +2 $$f | \
+		while read -r l; do \
+			echo -n "$$(basename $$f .woopt.csv)," >> $@; \
+			echo $$l >> $@; \
+		done; \
+	done
 
 $(BATCH) : data/%.csv : samples/%.i | data
-	$(RUSTINA) --batch $(shell pwd)/$@ $(shell pwd)/$< > /dev/null 2>&1
+	@$(RUSTINA) --batch $(shell pwd)/$@ $(shell pwd)/$< > /dev/null 2>&1
+
+$(BATCHX) : data/%.woopt.csv : samples/%.i | data
+	@$(RUSTINA) -x --batch $(shell pwd)/$@ $(shell pwd)/$< > /dev/null 2>&1
 
 data:
 	@mkdir data

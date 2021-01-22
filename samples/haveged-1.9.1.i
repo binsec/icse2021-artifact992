@@ -1,4 +1,3 @@
-/*@ rustina_out_of_scope */
 # 210 "/usr/lib/gcc/i586-linux-gnu/4.9/include/cpuid.h"
 static __inline unsigned int
 __get_cpuid_max (unsigned int __ext, unsigned int *__sig)
@@ -8250,3 +8249,4 @@ static void cpuid( /* RETURN: none               */
    regs[2] = sfn;
    { register int ecx asm ("ecx") = regs[2]; __asm__ ("cpuid\n\t" : "=a" (regs[0]), "=b" (regs[1]), "=c" (regs[2]), "=d" (regs[3]) : "0" (fn)); (void) ecx; };
 }
+

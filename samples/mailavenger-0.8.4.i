@@ -31,7 +31,6 @@ struct traceback {
 # 55 "./stktrace.c"
 static struct traceback *stkcache[509U];
 
-/*@ rustina_out_of_scope */
 # 67 "./stktrace.c"
 const char *
 __backtrace (const char *file, int lim)
@@ -99,3 +98,4 @@ __backtrace (const char *file, int lim)
 
   return tb->name;
 }
+

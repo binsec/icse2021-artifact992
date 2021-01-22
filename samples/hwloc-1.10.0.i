@@ -1,4 +1,3 @@
-/*@ rustina_out_of_scope */
 # 15 "/vagrant/allpkg/hwloc-1.10.0/include/private/cpuid-x86.h"
 static __inline__ int hwloc_have_x86_cpuid(void)
 {
@@ -44,3 +43,4 @@ static __inline__ void hwloc_x86_cpuid(unsigned *eax, unsigned *ebx, unsigned *e
 
 
 }
+
