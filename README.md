@@ -1,4 +1,4 @@
-# A Replication of Automatic Inline Assembly Interface Compliance Check and Patch
+# A Replication of Automatic Inline Assembly Interface Compliance Check and Patch [![DOI](https://zenodo.org/badge/291235168.svg)](https://zenodo.org/badge/latestdoi/291235168)
 
 This is a companion repository made available to support experimental claims of the paper [Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine](https://conf.researchr.org/details/icse-2021/icse-2021-papers/82/Interface-Compliance-of-Inline-Assembly-Automatically-Check-Patch-and-Refine) ([preprint](icse2021-paper992.pdf)).
 
