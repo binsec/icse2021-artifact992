@@ -1,4 +1,4 @@
-# A Replication of Automatic Inline Assembly Interface Compliance Check and Patch [![DOI](https://zenodo.org/badge/291235168.svg)](https://zenodo.org/badge/latestdoi/291235168)
+# RusTINA: Automatically checking and Patching Inline Assembly Interface Compliance (Artifact Evaluation) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4601172.svg)](https://doi.org/10.5281/zenodo.4601172)
 
 This is a companion repository made available to support experimental claims of the paper [Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine](https://conf.researchr.org/details/icse-2021/icse-2021-papers/82/Interface-Compliance-of-Inline-Assembly-Automatically-Check-Patch-and-Refine) ([preprint](icse2021-paper992.pdf)).
 
@@ -13,7 +13,7 @@ Assuming you are at the root directory of this repository, you can run the follo
 ```shell
 make all
 ```
-*It could take some times between each output (2-10 minutes depending on hardware capabilities).*
+*It could take some times between each output (2-10 minutes depending on hardware capabilities). Overall, running `make all` will take between 5 and 20 minutes.*
 
 It will sequentially call ***RUSTInA*** on:
 1. the example from **II. CONTEXT AND MOTIVATION**;

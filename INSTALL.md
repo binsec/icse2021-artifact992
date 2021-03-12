@@ -1,7 +1,7 @@
 ***RUSTInA*** is supplied as an self-contained [AppImage](bin/rustina-x86_64.AppImage) (**Linux** equivalent of `.exe` on **Windows**).
 It should be run in a `x86_64` **Ubuntu** *18.04* environment to work properly.
 
-In addition to the *AppImage* itself, we released a [**docker** container](https://github.com/recoules/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.tar.gz) and a [**VirtualBox** image](https://github.com/recoules/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.ova) "ready-to-use".
+In addition to the *AppImage* itself, we released a [**docker** container](https://github.com/binsec/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.tar.gz) and a [**VirtualBox** image](https://github.com/binsec/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.ova) "ready-to-use".
 *Container and Appliance only wrap the content of the repository with the dependencies resolved.*
 
 The setup will depend on the choosen method:
@@ -20,7 +20,7 @@ sudo apt-get install make python python-pandas python-tabulate
 
 # Docker user
 
-The container is available in the [release panel](https://github.com/recoules/icse2021-artifact992/releases/tag/1.0) ([download](https://github.com/recoules/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.tar.gz)).
+The container is available in the [release panel](https://github.com/binsec/icse2021-artifact992/releases/tag/1.0) ([download](https://github.com/binsec/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.tar.gz)).
 
 In a terminal, use the following to install the container:
 ```shell
@@ -45,7 +45,7 @@ docker run --rm --mount type=bind,source="$(pwd)",target=/shared -ti icse2021-ar
 
 # VirtualBox user
 
-The image is available in the [release panel](https://github.com/recoules/icse2021-artifact992/releases/tag/1.0) ([download](https://github.com/recoules/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.ova)).
+The image is available in the [release panel](https://github.com/binsec/icse2021-artifact992/releases/tag/1.0) ([download](https://github.com/binsec/icse2021-artifact992/releases/download/1.0/icse2021-artifact992.ova)).
 
 In **VirtualBox**, select **File**, **Import Appliance...** and then browse to the `icse2021-artifact992.ova`. Select **Next** and finaly **Import**.
 Alternatively, double-click on the file `icse2021-artifact992.ova` and select **Import**.
